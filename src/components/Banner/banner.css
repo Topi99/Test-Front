@@ -1,0 +1,18 @@
+.banner {
+	widows: 100vw;
+	height: 100vh;
+	background-image: url('../../static/img/bg-salad.jpg');
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+}
+	.banner .banner--main-txt-left {
+		font-size: 7.5rem;
+		text-align: left;
+		width: 50%;
+		font-weight: bold;
+		height: auto;
+		padding: 20px;
+		text-shadow: 3px 3px 5px rgba(0,0,0,.5);
+	}
