@@ -1,6 +1,5 @@
 .banner {
-	widows: 100vw;
-	height: 100vh;
+	min-height: 100vh;
 	background-image: url('../../static/img/bg-salad.jpg');
 	background-position: center;
 	background-size: cover;
@@ -12,7 +11,8 @@
 		text-align: left;
 		width: 50%;
 		font-weight: bold;
-		height: auto;
+		height: 100vh;
 		padding: 20px;
 		text-shadow: 3px 3px 5px rgba(0,0,0,.5);
+		line-height: 8rem;
 	}

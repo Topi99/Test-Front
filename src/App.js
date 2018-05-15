@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 import Navigation from './components/Navigation/Navigation';
-import Banner from './components/Banner/Banner';
+import Landing from './components/Landing/Landing';
+import Restaurants from './components/Restaurants/Restaurants';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
 	render() {
 		return (
-			<div className="App">
-				<Navigation/>
-				<Banner/>
-			</div>
+			<Router>
+				<div className="App">
+					<Navigation/>
+					<Route exact path="/" component={Landing} />
+					<Route path="/restaurants" component={Restaurants} />
+				</div>
+			</Router>
 		);
 	}
 }
