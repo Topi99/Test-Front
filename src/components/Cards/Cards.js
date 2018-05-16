@@ -15,7 +15,7 @@ export class SimpleCard extends React.Component {
 		if(this.props.isContainer) {
 			this.setState({style:{
 				'position':'absolute',
-				'zIndex':'-1',
+				'zIndex':'1',
 				'top':'35%',
 				'left':'0',
 				'right':'0',

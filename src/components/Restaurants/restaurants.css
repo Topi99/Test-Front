@@ -2,3 +2,19 @@
 	width: 100%;
 	padding: 0;
 }
+
+.restaurant--name {
+	font-weight: bold;
+}
+
+.sort-bar {
+	padding: 25px;
+}
+
+.sort-bar p select {
+	padding: 15px;
+	margin-left: 10px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
