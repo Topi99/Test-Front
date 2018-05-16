@@ -1,12 +1,13 @@
 import React from 'react';
 import {Grid, Row, Col} from 'react-flexbox-grid';
+import './header.css';
 
 const Header = (props) => {
 	return(
-		<Grid fluid>
+		<Grid className="header">
 			<Row>
 				<Col>
-					<h2>{props.children}</h2>
+					{props.children}
 				</Col>
 			</Row>
 		</Grid>
