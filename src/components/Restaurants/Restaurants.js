@@ -4,6 +4,7 @@ import Header from '../Header/Herader';
 import Img from '../../static/img/food2.jpg';
 import './restaurants.css';
 import {SimpleCard} from '../Cards/Cards';
+import {AxiosProvider, Get} from 'react-axios';
 
 class Restaurants extends Component {
 	constructor(props) {
@@ -25,7 +26,20 @@ class Restaurants extends Component {
 					</Header>
 					<SimpleCard isContainer>
 						<ul>
-							<li>fdsafasd</li>
+
+							<Get url="https://s3-us-west-2.amazonaws.com/lgoveabucket/data_melp.json">
+								{(error, response, isLoading, onReload) => {
+									if(error) {
+										return (<div>Something bad happened: {error.message} <button onClick={() => onReload({ params: { reload: true } })}>Volver a intentar</button></div>);
+									} else if(isLoading) {
+										return (<div>Cargando...</div>);
+									} else if(response !== null) {
+										console.log(response.data);
+										return(<Col xs={12}>fda</Col>);
+									}
+									return(<div>Cargando...</div>);
+								}}
+							</Get>
 						</ul>
 					</SimpleCard>
 				</Row>
